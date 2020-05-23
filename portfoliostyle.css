@@ -241,7 +241,7 @@ img {
   align-items: center;
   text-align: center;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   padding: 0 2rem;
   background: var(--main-gray);
 }
