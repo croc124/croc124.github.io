@@ -95,9 +95,9 @@ img {
 }
 
 .nav-logo {
-  width: 12rem;
-  height: 15rem;
-  justify-content: flex-start;
+  width: 50rem;
+  height: 55rem;
+  float: left;
 }
 
 .nav-list {
