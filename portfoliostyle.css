@@ -95,10 +95,9 @@ img {
 }
 
 .nav-logo {
-  width: 50rem;
-  height: 55rem;
+  width: 30rem;
+  height: 35rem;
   float: left;
-  display: block;
   margin-left: 10rem;
   margin-right: 500rem;
 }
