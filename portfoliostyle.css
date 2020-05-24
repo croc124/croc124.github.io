@@ -92,13 +92,13 @@ img {
   background-color: var(--main-green);
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
   z-index: 10;
-  height: 7rem; 
+  height: 7rem;
 }
 
 .nav-logo {
   width: 17rem;
   height: 12rem;
-  padding: 2rem;
+  padding: 1rem;
   margin-right: auto;
 }
 
