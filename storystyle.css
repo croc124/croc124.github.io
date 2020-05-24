@@ -346,7 +346,7 @@ padding-top: 5vh;
 
 .para-color {
   width: 99.225vw;
-  height: 30vh;
+  
   position: relative;
   margin-left: -49.59vw;
   left: 50%;
@@ -359,13 +359,13 @@ padding-top: 5vh;
 }
 
 .para-two-pic {
-  width: 30vw;
-  height: 28.3vh;
+  width: 15vw;
+  height: 14.8vh;
   float: left;
 }
 
 .para-six-pic {
-  width: 30vw;
-  height: 30vh;
+  width: 20vw;
+  height: 25vh;
   float: right;
 }
