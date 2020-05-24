@@ -98,6 +98,9 @@ img {
   width: 50rem;
   height: 55rem;
   float: left;
+  display: block;
+  margin-left: 10rem;
+  margin-right: 500rem;
 }
 
 .nav-list {
