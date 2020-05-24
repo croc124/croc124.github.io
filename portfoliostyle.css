@@ -240,6 +240,50 @@ img {
   transition: transform 0.3s ease-out;
 }
 
+.story-main {
+  text-align: center;
+  padding: 10rem 2rem;
+  background: var(--main-blue);
+  width: 100%;
+}
+
+.story-section-header {
+  max-width: 640px;
+  margin: 0 auto 6rem auto;
+  border-bottom: 0.2rem solid var(--main-white);
+}
+
+@media (max-width: 28.75em) {
+  .projects-section-header {
+    font-size: 4rem;
+  }
+}
+
+.para-two-fix {
+  width: 99.225vw;
+  height: 50vh;
+  position: relative;
+  margin-left: -49.59vw;
+  left: 50%;
+  background-color: var(--main-green);
+  margin-top: 2rem;
+}
+
+.para-two {
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.para-two-p {
+  padding-top: 2rem;
+}
+
+.para-two-pic {
+  width: 20vw;
+  height: 50vh;
+  float: left;
+}
+
 /* Contact section */
 
 .contact-section {
