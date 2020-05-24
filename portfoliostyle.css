@@ -97,6 +97,8 @@ img {
 .nav-logo {
   width: 10rem;
   height: 6rem;
+  padding: 2rem;
+  margin-right: auto;
 }
 
 .nav-list {
