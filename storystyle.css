@@ -102,6 +102,7 @@ img {
   margin-right: auto;
 }
 
+
 .nav-list {
   display: flex;
   margin-right: 2rem;
@@ -124,7 +125,7 @@ img {
 }
 
 .nav-list a:hover {
-  background: var(--main-blue);
+  color: #b8bab9;
 }
 
 /* Welcome section */
@@ -344,6 +345,10 @@ padding-top: 5vh;
     padding-top: 1vh;
 }
 
+.p-fix2 {
+    padding: 1vh;
+}
+
 .para-color {
   width: 99.225vw;
   
@@ -368,4 +373,22 @@ padding-top: 5vh;
   width: 20vw;
   height: 25vh;
   float: right;
+}
+
+.para-seven-pic {
+  width: 23vw;
+  height: 24vh;
+  float: left;
+    padding: 1rem;
+}
+
+.story-section-footer {
+  max-width: 640px;
+  margin: 0 auto 6rem auto;
+  border-top: 0.2rem solid var(--main-white);
+}
+
+.story-section-footerdiv {
+padding-top: 4vh;
+    background-color: var(--main-blue);
 }
