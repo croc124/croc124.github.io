@@ -97,7 +97,7 @@ img {
 .nav-logo {
   width: 12rem;
   height: 15rem;
-  float: left;
+  justify-content: flex-start;
 }
 
 .nav-list {
