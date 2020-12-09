@@ -286,6 +286,10 @@ img {
   transform: translateY(8px);
 }
 
+.facebook:hover {
+ fill(blue); 
+}
+
 /* Footer */
 
 footer {
