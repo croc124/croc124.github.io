@@ -276,20 +276,59 @@ img {
   flex-wrap: wrap;
 }
 
-.contact-details {
+.facebook {
   font-size: 2.4rem;
   text-shadow: 2px 2px 1px #1f1f1f;
   transition: transform 0.3s ease-out;
-  background-color: #008cff; 
-}
-
-.contact-details:hover {
-  transform: translateY(8px);
-  background-color: #008cff; 
 }
 
 .facebook:hover {
- color: #008cff; 
+  transform: translateY(8px);
+  color: blue;
+}
+
+.github {
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+}
+
+.github:hover {
+  transform: translateY(8px);
+  color: black;
+}
+
+.twitter {
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+}
+
+.twitter:hover {
+  transform: translateY(8px);
+  color: aqua;
+}
+
+.mail {
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+}
+
+.mail:hover {
+  transform: translateY(8px);
+  color: red;
+}
+
+.call {
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+}
+
+.call:hover {
+  transform: translateY(8px);
+  color: silver;
 }
 
 /* Footer */
