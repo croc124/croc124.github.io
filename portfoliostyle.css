@@ -358,7 +358,7 @@ img {
 
 .call:hover {
   transform: translateY(8px);
-  color: silver;
+  color: red;
 }
 
 /* Footer */
