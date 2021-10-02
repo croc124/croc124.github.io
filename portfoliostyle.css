@@ -274,16 +274,73 @@ img {
   max-width: 980px;
   margin-top: 4rem;
   flex-wrap: wrap;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-.contact-details {
+.facebook {
   font-size: 2.4rem;
   text-shadow: 2px 2px 1px #1f1f1f;
   transition: transform 0.3s ease-out;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
 }
 
-.contact-details:hover {
+.facebook:hover {
   transform: translateY(8px);
+  color: blue;
+}
+
+.github {
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.github:hover {
+  transform: translateY(8px);
+  color: black;
+}
+
+.twitter {
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.twitter:hover {
+  transform: translateY(8px);
+  color: aqua;
+}
+
+.mail {
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.mail:hover {
+  transform: translateY(8px);
+  color: red;
+}
+
+.call {
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.call:hover {
+  transform: translateY(8px);
+  color: silver;
 }
 
 /* Footer */
