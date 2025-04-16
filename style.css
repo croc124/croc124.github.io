@@ -1,0 +1,118 @@
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.page {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+#c {
+    width: 40vw;
+    height: 100vh;
+    display: block;
+    background: url(assets/pictures/model-background.jpg) repeat-y;
+    background-size: 42vw auto;
+
+    /* Enable animation */
+    animation: scrollUp infinite 10s linear;
+}
+
+/* Define keyframes for background scrolling */
+@keyframes scrollUp {
+    from {
+        background-position-y: 0; /* Start at the initial position */
+    }
+    to {
+        background-position-y: -105%; /* Move upwards */
+    }
+}
+
+#mainBody {
+    font-family: monospace;
+    padding: 0.5em;
+    background: #74befe;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    display: block;
+}
+
+.box {
+    display: flex;
+    position: center;
+    flex-wrap: wrap;
+
+}
+
+.outside {
+    position: relative; /* Ensures #blocks can be positioned relative to #outside */
+    height: 5.5vw;
+    width: 9.4vw;
+    margin: 1vw;
+    margin-bottom: 2vw;
+    padding: 0;
+    flex-basis: auto;
+}
+
+.item {
+    background-image: url(assets/pictures/jubilee.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-color: #D6D1CB;
+    border-style: solid;
+    border-top-width: 1.3vw;
+    width: 100%;
+    height: 100%;
+    padding: 0.3vw;
+    transition: transform .7s ease-in-out;
+    transform: none;
+}
+
+
+.blocks {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 4vw;
+    height: 0.7vw;
+
+    top: 0;
+    left: 6.4vw; /* AHHHHH */
+}
+
+.block {
+    display: flex;
+    background-color: #BCB8B1; /* Makes the blocks visible */
+    width: 30%; /* Set a fixed width for blocks */
+    height: 100%; /* Set a fixed height for blocks */
+    box-shadow: inset 0.1em 0.1em 0.1em rgba(255, 255, 255, 0.311), 0px 1px 1px rgba(0, 0, 0, 0.5);
+
+    border-color: #A19D9E;
+    border-style: solid;
+    border-width: 0.8px;
+
+}
+
+.content-box {
+    display: none; /* Initially hide all content boxes */
+    font-size: 1.2em;
+    font-family: Arial, sans-serif;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 1em;
+    margin-top: 1em;
+    border-radius: 5px;
+    color: black;
+}
+
+.active {
+    display: block; /* Only active content box is visible */
+}
