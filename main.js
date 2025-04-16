@@ -12,35 +12,25 @@ const renderer = new THREE.WebGLRenderer({antialias: true, canvas, alpha: true,}
 
 let lastSelectedItem = null; // Track the last selected item
 
-function spinTheCard(object, index, blocks, contentBoxes, rotation){
+function spinTheCard(object, index, blocks, contentBoxes){
     
     let transformValue = window.getComputedStyle(object).getPropertyValue("transform");
     let flipped = object.style.transform.includes("rotateY(180deg)");
 
-    blocks.style.transition = "transform 0.7s ease-in-out";
-    blocks.style.transform = flipped ? "" : "rotateY("+rotation+") translateX(6.6vw) translateY(-1.4vw)"; // Keeps blocks in place
+
+    blocks.style.transform = flipped ? "rotateY(0deg) translateX(0vw) translateY(-1.4vw)" : "rotateY(180deg) translateX(6.6vw) translateY(-1.4vw)"; // Keeps blocks in place
 
     object.style.transition = "transform 0.7s ease-in-out";
-    object.style.transform = flipped ? "" : "rotateY("+rotation+")";
+    object.style.transform = flipped ? "rotateY(0deg)" : "rotateY(180deg)";
 
-    setTimeout(() => {
-        if (flipped) {
-            object.style.backgroundImage = "url(assets/pictures/jubilee.jpg)"; // Original image
-        } else {
-            object.style.backgroundImage = "url(assets/pictures/model-background.jpg)"; // New image
-        }
-    }, 350); // Switch midway through rotation when the card is facing away
+    setTimeout(() => {object.style.backgroundImage = flipped ? "url(assets/pictures/jubilee.jpg)" : "url(assets/pictures/model-background.jpg)";}, 350); // Switch midway through rotation when the card is facing away
 
     // Hide all content boxes
     contentBoxes.forEach(box => box.classList.remove("active"));
 
     // Show the corresponding content box
-    if (!flipped) {
         let contentToShow = document.getElementById(`content-${index + 1}`);
         if (contentToShow) contentToShow.classList.add("active");
-    } else {
-        document.getElementById("default-content").classList.add("active");
-    }
 
     lastSelectedItem = flipped ? null : object; // Update last selected item only if not flipped
 
@@ -54,21 +44,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
         item.addEventListener("click", function() {
 
-            // Unflip the last selected item (if any and different from current)
+            // If there's a previously selected item and it's different, flip both simultaneously
             if (lastSelectedItem && lastSelectedItem !== this) {
-                let lastBlocks = lastSelectedItem.querySelector(".blocks"); // Get last item's blocks
-                spinTheCard(lastSelectedItem, Array.from(document.querySelectorAll(".item")).indexOf(lastSelectedItem), lastBlocks, contentBoxes, "none");
-                lastSelectedItem.style.backgroundImage = "url(assets/pictures/jubilee.jpg)";
+                let lastBlocks = lastSelectedItem.querySelector(".blocks");
+
+                // Flip the previous card back
+                spinTheCard(lastSelectedItem, Array.from(document.querySelectorAll(".item")).indexOf(lastSelectedItem), lastBlocks, contentBoxes, "0deg");
             }
 
-            // Flip the clicked card
+            // Flip the newly clicked card at the same time
             spinTheCard(this, index, blocks, contentBoxes, "180deg");
-
-            // Update the last selected item
-            lastSelectedItem = this;
         });
     });
 });
+
+
+
 
 
 
