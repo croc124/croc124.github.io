@@ -63,6 +63,10 @@ html, body {
     flex-basis: auto;
 }
 
+.outside:hover {
+    cursor: pointer;
+}
+
 .item {
     background-image: url(assets/pictures/jubilee.jpg);
     background-size: 100%;
