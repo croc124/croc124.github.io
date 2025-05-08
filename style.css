@@ -1,3 +1,8 @@
+@font-face {
+    font-family: BruceForever;
+    src: url(assets/fonts/BruceForeverRegular.ttf);
+}
+
 html, body {
     box-sizing: border-box;
     margin: 0;
@@ -68,7 +73,6 @@ html, body {
 }
 
 .item {
-    background-image: url(assets/pictures/jubilee.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     border-color: #D6D1CB;
@@ -119,4 +123,9 @@ html, body {
 
 .active {
     display: block; /* Only active content box is visible */
+}
+
+h2 {
+    font-family: BruceForever;
+    text-align: left;
 }

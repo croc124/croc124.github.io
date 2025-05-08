@@ -10,31 +10,41 @@ const loader = new GLTFLoader();
 const canvas = document.querySelector("canvas");
 const renderer = new THREE.WebGLRenderer({antialias: true, canvas, alpha: true,});
 
+let originalBackground = "";
 let lastSelectedItem = null; // Track the last selected item
 
-function spinTheCard(object, index, blocks, contentBoxes){
+function spinTheCard(object, index, blocks, contentBoxes) {
+    // Store the original background on the element itself, if it isn't already stored
+    if (!object.dataset.originalBackground) {
+        object.dataset.originalBackground = object.style.backgroundImage;
+    }
     
-    let transformValue = window.getComputedStyle(object).getPropertyValue("transform");
     let flipped = object.style.transform.includes("rotateY(180deg)");
 
-
-    blocks.style.transform = flipped ? "rotateY(0deg) translateX(0vw) translateY(-1.4vw)" : "rotateY(180deg) translateX(6.6vw) translateY(-1.4vw)"; // Keeps blocks in place
+    // Adjust the blocks positioning based on the flipped state
+    blocks.style.transform = flipped
+        ? "rotateY(0deg) translateX(0vw) translateY(-1.4vw)"
+        : "rotateY(180deg) translateX(6.6vw) translateY(-1.4vw)";
 
     object.style.transition = "transform 0.7s ease-in-out";
     object.style.transform = flipped ? "rotateY(0deg)" : "rotateY(180deg)";
 
-    setTimeout(() => {object.style.backgroundImage = flipped ? "url(assets/pictures/jubilee.jpg)" : "url(assets/pictures/model-background.jpg)";}, 350); // Switch midway through rotation when the card is facing away
+    // Wait half a second to switch the background when the card is mid-rotation
+    setTimeout(() => {
+        object.style.backgroundImage = flipped 
+            ? object.dataset.originalBackground  // flipped state: show model background
+            : "url(assets/pictures/model-background.jpg)";             // not flipped: revert to stored original
+        console.log("Background image set to:", flipped ? "model-background.jpg" : object.dataset.originalBackground);
+    }, 350);
 
-    // Hide all content boxes
+    // Manage content box activation
     contentBoxes.forEach(box => box.classList.remove("active"));
+    let contentToShow = document.getElementById(`content-${index + 1}`);
+    if (contentToShow) contentToShow.classList.add("active");
 
-    // Show the corresponding content box
-        let contentToShow = document.getElementById(`content-${index + 1}`);
-        if (contentToShow) contentToShow.classList.add("active");
-
-    lastSelectedItem = flipped ? null : object; // Update last selected item only if not flipped
-
+    lastSelectedItem = flipped ? null : object;
 }
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
