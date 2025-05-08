@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 const container = document.getElementById('threedee');
 
@@ -9,6 +10,10 @@ const loader = new GLTFLoader();
 
 const canvas = document.querySelector("canvas");
 const renderer = new THREE.WebGLRenderer({antialias: true, canvas, alpha: true,});
+
+const controls = new OrbitControls( camera, renderer.domElement );
+
+let isUserInteracting = false;
 
 let originalBackground = "";
 let lastSelectedItem = null; // Track the last selected item
@@ -69,10 +74,16 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+controls.addEventListener('start', () => {
+    isUserInteracting = true;
+});
 
-
-
-
+controls.addEventListener('end', () => {
+    isUserInteracting = false;
+    camera.position.z = 5;
+    camera.position.y = 2.3;
+    camera.position.x = 0;
+});
 
 
 function resizeCanvasToDisplaySize() {
@@ -87,6 +98,7 @@ function resizeCanvasToDisplaySize() {
       renderer.setSize(width, height, false);
       camera.aspect = width / height;
       camera.updateProjectionMatrix();
+      controls.update();
   
       // update any render target sizes here
     }
@@ -119,12 +131,16 @@ scene.add(light);
 
 camera.position.z = 5;
 camera.position.y = 2.3;
+controls.target.set(0, 2.3, 0); // Set the target to the center of the scene
+controls.update();
 
 function animate() {
     resizeCanvasToDisplaySize();
-    if (guy) { // Check if guy is loaded before applying rotation
+    if (guy && !isUserInteracting) { // Check if guy is loaded before applying rotation
         guy.rotation.y += 0.01;
     }
+
+    controls.update(); // Update the controls
 
     renderer.render( scene, camera );
     

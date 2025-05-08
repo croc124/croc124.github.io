@@ -2,88 +2,151 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>My first three.js app</title>
+    <title>Joshua Henry Portfolio</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="page">
-        <div id = "threedee">
-            <canvas id="c"></canvas>
-            <script type="module" src="/main.js"></script>
+      <!-- Three.js 3D background section -->
+      <div id="threedee">
+        <canvas id="c"></canvas>
+        <script type="module" src="/main.js"></script>
+      </div>
+
+      <div id="mainBody">
+        <!-- Navigation grid with clickable boxes -->
+        <div class="box">
+          <!-- Box 1: About Me -->
+          <div class="outside">
+            <div class="item" style="background-image: url(assets/pictures/AboutMe.jpg);">
+              <div class="blocks">
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Box 2: Projects -->
+          <div class="outside">
+            <div class="item" style="background-image: url(assets/pictures/projects.jpg);">
+              <div class="blocks">
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Box 3: Resume -->
+          <div class="outside">
+            <div class="item" style="background-image: url(assets/pictures/resume.jpg);">
+              <div class="blocks">
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Box 4: Blog -->
+          <div class="outside">
+            <div class="item" style="background-image: url(assets/pictures/blog.jpg);">
+              <div class="blocks">
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Box 5: Contact -->
+          <div class="outside">
+            <div class="item" style="background-image: url(assets/pictures/contact.jpg);">
+              <div class="blocks">
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div id="mainBody">
-            <div class="box">
-                <div class ="outside">
-                    <div class ="item" style="background-image: url(assets/pictures/jubilee.jpg);">
-                        <div class ="blocks">
-                            <div class="block"></div>
-                            <div class="block"></div>
-                            <div class="block"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class ="outside">
-                    <div class ="item" style="background-image: url(assets/pictures/computer.jpg);">
-                        <div class ="blocks">
-                            <div class="block"></div>
-                            <div class="block"></div>
-                            <div class="block"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class ="outside">
-                    <div class ="item" style="background-image: url(assets/pictures/jubilee.jpg);">
-                        <div class ="blocks">
-                            <div class="block"></div>
-                            <div class="block"></div>
-                            <div class="block"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class ="outside">
-                    <div class ="item" style="background-image: url(assets/pictures/jubilee.jpg);">
-                        <div class ="blocks">
-                            <div class="block"></div>
-                            <div class="block"></div>
-                            <div class="block"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class ="outside">
-                    <div class ="item" style="background-image: url(assets/pictures/jubilee.jpg);">
-                        <div class ="blocks">
-                            <div class="block"></div>
-                            <div class="block"></div>
-                            <div class="block"></div>
-                        </div>
-                    </div>
-                </div>
-                
 
-            </div>
+        <!-- Content Sections -->
+        <!-- Section 1: About Me -->
+        <div class="content-box active" id="content-1">
+          <h2>About Me</h2>
+          <p>Hello! I'm Joshua Henry, a recent computer science graduate who is passionate about technology and its potential to transform our lives. I especially enjoy doing things with video games and web design. This website is based on Marvel's "X-Men 97", and is a work in progress.</p>
+          <p>This portfolio is a snapshot of my work, skills, and ideas. I invite you to explore the sections above, where you can see my latest projects, review my resume, read my blog, or get in touch with me directly.</p>
+        </div>
 
+        <!-- Section 2: Projects -->
+        <div class="content-box" id="content-2">
+          <h2>Projects</h2>
+          <p>Throughout my studies and personal endeavors, I've built a variety of projects that demonstrate my technical abilities and creative problem-solving skills. Here are some highlights:</p>
+          <ul>
+            <li><strong>This Portfolio:</strong> Exploration of Three.js with some fun css buttons/animations</li>
+            <li><strong>AI Connect 4:</strong> Created a minimax algorithm to compete in connect 4</li>
+            <li><strong>Procedural Generation Test:</strong> Experimented OpenGl and C# to create a procedurally generation terrain</li>
+            <li><strong>LightSys Code-a-Thons:</strong> Joined a team to add export options to a C++ app, led a team the next year to revitalize an outdate website that sees 80,000+ visitors a year</li>
+          </ul>
+          <p>You can also check out my GitHub to see more: <a href="https://github.com/croc124">croc124</a></p>
+        </div>
+
+        <!-- Section 3: Resume -->
+        <div class="content-box" id="content-3">
+          <h2>Resume</h2>
+          <p>Below is an overview of my background, education, and skills:</p>
+          <h3>Education</h3>
+          <ul>
+            <li><strong>B.S. in Computer Science</strong> – Palm Beach Atlantic University, May 2025</li>
+          </ul>
+          <h3>Technical Skills</h3>
+          <ul>
+            <li>Languages: HTML, CSS, Javascript, Python, Java</li>
+            <li>Game Development: Unity </li>
+            <li>Tools & Frameworks: GitHub, Trello, Agile development</li>
+          </ul>
+          <h3>Experience</h3>
+          <ul>
+            <li><strong>Computer Science Tutor</strong> – Taught students individually to supplement their college curriculum</li>
+          </ul>
+          <p>For a detailed version, you can <a href="assets/resume.pdf" target="_blank">download my full resume</a>.</p>
+        </div>
+
+        <!-- Section 4: Blog -->
+        <div class="content-box" id="content-4">
+          <h2>Blog</h2>
+          <p>Welcome to my blog—a place where I share thoughts on technology, programming challenges, game development, and more. Some of my recent posts include:</p>
+          <ul>
+            <li><a href="#post1">Lorem Ipsum, the man behind the mask</a></li>
+            <li><a href="#post2">Dolor sit amet, and other every day riddles</a></li>
+            <li><a href="#post3">Lorem Ipsum Dolor Sit Amet</a></li>
+          </ul>
+          <p>Check back regularly for new insights and updates!</p>
+        </div>
+
+        <!-- Section 5: Contact -->
+        <div class="content-box" id="content-5">
+          <h2>Contact</h2>
+          <p>If you'd like to get in touch, whether it's to discuss a project, explore collaboration opportunities, or just say hello, please use the contact information below:</p>
+          <ul>
+            <li>Email: <a href="mailto:joshuahenryusername@gmail.com">joshuahenryusername@gmail.com</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/joshua-logan-henry/" target="_blank">Joshua Henry</a></li>
+            <li>GitHub: <a href="https://github.com/croc124" target="_blank">joshuahenry</a></li>
+          </ul>
+          <h3>Contact Form</h3>
+          <form action="https://formspree.io/f/your-form-id" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
             
-            <div class="content-box active" id="content-1">
-                <h2>JOSHUA HENRY</h2>
-                <p>Hello! I'm Joshua Henry, a recent computer science graduate.
-                    I am passionate about technology and its potential to improve
-                    our lives. I have a strong interest in video game development, web design, and 
-                    finding solutions to complex problems. 
-                    </p>
-                    <p>This website is based on the Marvel
-                    TV show "X-Men 97" and is a work in progress. Please explore my Projects
-                    and resume by clicking the buttons above. 
-                    </p>
-                </p>
-            </div>
-            <div class="content-box" id="content-2">Item 1: About me</div>
-            <div class="content-box" id="content-3">Item 2: might only do 5</div>
-            <div class="content-box" id="content-4">Item 3: contact</div>
-            <div class="content-box" id="content-5">Item 4: Projects</div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="_replyto" required>
             
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send</button>
+          </form>
+        </div>
 
-        </div> 
-    </div>
-
+      </div> <!-- End of mainBody -->
+    </div> <!-- End of page -->
   </body>
 </html>
