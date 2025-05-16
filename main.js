@@ -39,7 +39,6 @@ function spinTheCard(object, index, blocks, contentBoxes) {
         object.style.backgroundImage = flipped 
             ? object.dataset.originalBackground  // flipped state: show model background
             : "url(assets/pictures/model-background.jpg)";             // not flipped: revert to stored original
-        console.log("Background image set to:", flipped ? "model-background.jpg" : object.dataset.originalBackground);
     }, 350);
 
     // Manage content box activation
