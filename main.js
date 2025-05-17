@@ -107,7 +107,7 @@ document.body.appendChild( renderer.domElement );
 
 let guy; // Declare guy variable outside the callback
 
-loader.load( 'assets/models/guy.glb', function ( gltf ) {
+loader.load( 'https://raw.githubusercontent.com/croc124/croc124.github.io/main/assets/models/guy.glb' , function ( gltf ) {
     guy = gltf.scene; // Assign guy inside the callback
     guy.scale.set(2.5, 2.5, 2.5); // Scale the model
     scene.add( guy );
