@@ -2,6 +2,7 @@
   "name": "joshua-henry-portfolio",
   "version": "0.0.0",
   "description": "A simple Three.js project using Vite and deployed on GitHub Pages",
+  "homepage": "https://croc124.github.io/",
 
   "scripts": {
     "dev": "vite",
